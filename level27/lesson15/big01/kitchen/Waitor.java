@@ -13,6 +13,8 @@ public class Waitor implements Observer{
     @Override
     public void update(Observable observable, Object o)
     {
-        ConsoleHelper.writeMessage(o.toString() + " was cooked by " + observable.toString());
+        Cook cook = (Cook)observable;
+        Order order = (Order)o;
+        ConsoleHelper.writeMessage(order.toString() + " was cooked by " + cook.toString());
     }
 }

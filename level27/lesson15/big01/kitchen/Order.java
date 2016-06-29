@@ -19,9 +19,25 @@ public class Order {
     }
 
     @Override
-    public String toString()
-    {
-        return "Your order: " + dishes +
-                " of Tablet{number=" + tablet.number + "}";
+    public String toString() {
+        if (isEmpty()) {
+            return "";
+        }
+        else {
+            return "Your order: " + dishes +
+                    " of Tablet{number=" + tablet.number + "}";
+        }
+    }
+
+    public boolean isEmpty() {
+        return dishes == null || dishes.isEmpty();
+    }
+    public int getTotalCookingTime(){
+        int cookingTime = 0;
+        for (Dish dish: dishes)
+        {
+            cookingTime += dish.getDuration();
+        }
+        return cookingTime;
     }
 }

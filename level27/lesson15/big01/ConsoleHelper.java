@@ -23,28 +23,22 @@ public class ConsoleHelper {
         }
 
     public static List<Dish> getAllDishesForOrder() throws IOException{
-        List<Dish> orderedDishes = new ArrayList<>();
-        writeMessage("Please select desired dishes:");
-        writeMessage(Dish.allDishesToString());
-        writeMessage("After finishing the order, please type \"exit\".");
-        String inputString;
-        while (!(inputString = readString()).equalsIgnoreCase("exit")){
-            Dish chosenDish = null;
-            for (int i = 0; i < Dish.values().length; i++){
-                    if (inputString.equalsIgnoreCase(Dish.values()[i].name())){
-                        chosenDish = Dish.values()[i];
-                        break;
-                    }
+        List<Dish> dishList = new ArrayList<>();
+        writeMessage("Please, choose a dish: " + Dish.allDishesToString());
+        do {
+            String dish = readString();
+            if ("exit".equalsIgnoreCase(dish)) {
+                break;
             }
-            if (chosenDish == null){
-                writeMessage("No such dish, select another one, or exit.");
+            try {
+                dishList.add(Dish.valueOf(dish));
             }
-            else {
-                writeMessage("Meal " + chosenDish.name() + " accepted.");
-                orderedDishes.add(chosenDish);
+            catch (IllegalArgumentException e) {
+                ConsoleHelper.writeMessage(String.format("%s is not detected", dish));
             }
         }
-        return orderedDishes;
+        while (true);
+        return dishList;
     }
 }
 
