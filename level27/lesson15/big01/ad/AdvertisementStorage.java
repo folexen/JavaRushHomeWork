@@ -22,7 +22,7 @@ class AdvertisementStorage {
         add(new Advertisement(someContent, "Third Video", 400, 2, 10 * 60));   //10 min
     }
 
-    public List<?> list() {
+    public List<Advertisement> list() {
         return videos;
     }
 
