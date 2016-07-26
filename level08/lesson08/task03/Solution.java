@@ -8,17 +8,14 @@ import java.util.Map;
 Проверить сколько людей имеют совпадающие с заданным имя или фамилию.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         HashMap<String, String> map = createMap();
         System.out.println(getCountTheSameLastName(map, "Ta"));
         System.out.println(getCountTheSameFirstName(map, "John"));
     }
 
-    public static HashMap<String, String> createMap()
-    {
+    public static HashMap<String, String> createMap() {
         //напишите тут ваш код
         HashMap<String, String> map = new HashMap<String, String>();
 
@@ -36,29 +33,22 @@ public class Solution
         return map;
     }
 
-    public static int getCountTheSameFirstName(HashMap<String, String> map, String name)
-    {
+    public static int getCountTheSameFirstName(HashMap<String, String> map, String name) {
         //напишите тут ваш код
         int count = 0;
         Iterator<Map.Entry<String, String>> iterator = map.entrySet().iterator();
 
-        while (iterator.hasNext())
-        {
+        while (iterator.hasNext()) {
             Map.Entry<String, String> pair = iterator.next();
             String s = pair.getValue();
             if (s.equals(name))
                 count++;
-
         }
         return count;
-
     }
 
-    public static int getCountTheSameLastName(HashMap<String, String> map, String familiya)
-    {
+    public static int getCountTheSameLastName(HashMap<String, String> map, String familiya) {
         //напишите тут ваш код
-
         return map.containsKey(familiya) ? 1 : 0;
-
     }
 }

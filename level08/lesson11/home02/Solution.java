@@ -13,101 +13,70 @@ import java.util.Set;
 6. Реализовать метод printPets, котороый должен выводить на экран всех животных, которые в нем есть. Каждое животное с новой строки
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Set<Cat> cats = createCats();
         Set<Dog> dogs = createDogs();
-
         Set<Object> pets = join(cats, dogs);
         printPets(pets);
-
         removeCats(pets, cats);
         printPets(pets);
     }
 
-    public static Set<Cat> createCats()
-    {
+    public static Set<Cat> createCats() {
         HashSet<Cat> result = new HashSet<Cat>();
-        Cat cat1 = new Cat();
-        result.add(cat1);
-        Cat cat2 = new Cat();
-        result.add(cat2);
-        Cat cat3 = new Cat();
-        result.add(cat3);
-        Cat cat4 = new Cat();
-        result.add(cat4);
+        for (int i = 0; i < 4; i++) {
+            result.add(new Cat());
+        }
         return result;
     }
 
-    public static Set<Dog> createDogs()
-    {
+    public static Set<Dog> createDogs() {
         //напишите тут ваш код
         HashSet<Dog> dogs = new HashSet<Dog>();
-        Dog dog1 = new Dog();
-        dogs.add(dog1);
-        Dog dog2 = new Dog();
-        dogs.add(dog2);
-        Dog dog3 = new Dog();
-        dogs.add(dog3);
-
+        for (int i = 0; i < 3; i++) {
+            dogs.add(new Dog());
+        }
         return dogs;
     }
 
-    public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs)
-    {
+    public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs) {
         //напишите тут ваш код
         HashSet<Object> pets = new HashSet<Object>();
-        for (Cat object : cats)
-        {
+        for (Cat object : cats) {
             pets.add(object);
         }
-        for(Dog object : dogs)
-        {
+        for(Dog object : dogs) {
             pets.add(object);
         }
         return pets;
     }
 
-    public static void removeCats(Set<Object> pets, Set<Cat> cats)
-    {
+    public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         //напишите тут ваш код
-
         Iterator<Cat> i2 = cats.iterator();
-        while (i2.hasNext())
-        {
+        while (i2.hasNext()) {
             Cat cat = i2.next();
             Iterator<Object> i1 = pets.iterator();
-            while (i1.hasNext())
-            {
+            while (i1.hasNext()) {
                 Object pet = i1.next();
-                 if (pet.equals(cat))
-                 {
+                 if (pet.equals(cat)) {
                      i1.remove();
                  }
             }
-
         }
-
     }
 
-    public static void printPets(Set<Object> pets)
-    {
+    public static void printPets(Set<Object> pets) {
         //напишите тут ваш код
-        for (Object object : pets)
-        {
+        for (Object object : pets) {
             System.out.println(object);
         }
     }
-    public static class Cat
-    {
 
-    }
-    public static class Dog
-    {
-
+    public static class Cat {
     }
 
-    //напишите тут ваш код
+    public static class Dog {
+    }
 }

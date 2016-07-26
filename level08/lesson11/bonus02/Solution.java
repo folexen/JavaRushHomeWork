@@ -25,30 +25,24 @@ import java.util.Map;
 Абрамовичи
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         //list of addresses
         HashMap<String, String> ad_map = new HashMap<String, String>();
-        while (true)
-        {
+        while (true) {
             String town = reader.readLine();
             if (town.isEmpty()) break;
             String family = reader.readLine();
             if (family.isEmpty()) break;
             ad_map.put(town, family);
-
         }
         //Town input
         String tmp = reader.readLine().toUpperCase();
-        for (Map.Entry<String, String> pair : ad_map.entrySet())
-        {
+        for (Map.Entry<String, String> pair : ad_map.entrySet()) {
             String town_get = pair.getKey();
             if (town_get.toUpperCase().equals(tmp))
                 System.out.println(pair.getValue());
         }
-}
+    }
 }

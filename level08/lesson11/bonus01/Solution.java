@@ -13,10 +13,8 @@ import java.util.Set;
 Используйте коллекции.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         //add your code here - напиши код тут
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> list = new ArrayList<String>();
@@ -33,9 +31,8 @@ public class Solution
         list.add("November");
         list.add("December");
         String month = reader.readLine();
-        for (int i = 0; i < list.size(); i++)
-        {
-            if (month.equals(list.get(i)))
+        for (int i = 0; i < list.size(); i++) {
+            if (month.equalsIgnoreCase(list.get(i)))
                 System.out.println(month + " is " + (i + 1)  + " month");
         }
     }

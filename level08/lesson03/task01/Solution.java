@@ -10,10 +10,8 @@ package com.javarush.test.level08.lesson03.task01;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         Set<String> fruit = new HashSet<String>();
         fruit.add("арбуз");
@@ -27,10 +25,8 @@ public class Solution
         fruit.add("ирис");
         fruit.add("картофель");
 
-        for (String text : fruit)
-        {
+        for (String text : fruit) {
             System.out.println(text);
         }
-
     }
 }

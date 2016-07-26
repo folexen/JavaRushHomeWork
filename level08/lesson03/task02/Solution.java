@@ -11,10 +11,8 @@ package com.javarush.test.level08.lesson03.task02;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         Map<String, String> food = new HashMap<String, String>();
         food.put("арбуз", "ягода");
@@ -28,8 +26,7 @@ public class Solution
         food.put("ирис", "цветок");
         food.put("картофель", "клубень");
 
-        for (Map.Entry<String, String> pair: food.entrySet())
-        {
+        for (Map.Entry<String, String> pair: food.entrySet()) {
             String s1 = pair.getKey();
             String s2 = pair.getValue();
             System.out.println(s1 + " - " + s2);

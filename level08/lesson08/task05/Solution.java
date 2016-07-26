@@ -9,21 +9,17 @@ import java.util.Map;
 Удалить людей, имеющих одинаковые имена.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         HashMap<String, String> tmp = createMap();
         removeTheFirstNameDuplicates(tmp);
-        for (Map.Entry<String, String> values : tmp.entrySet())
-        {
+        for (Map.Entry<String, String> values : tmp.entrySet()) {
             String key = values.getKey();
             String value = values.getValue();
             System.out.println(key + " " + value);
         }
     }
-    public static HashMap<String, String> createMap()
-    {
+    public static HashMap<String, String> createMap() {
         //напишите тут ваш код
         HashMap<String, String> map = new HashMap<String, String>();
         map.put("q1", "name1");
@@ -39,39 +35,30 @@ public class Solution
         return map;
     }
 
-    public static void removeTheFirstNameDuplicates(HashMap<String, String> map)
-    {
+    public static void removeTheFirstNameDuplicates(HashMap<String, String> map) {
         //напишите тут ваш код
         ArrayList<String> names = new ArrayList<String>();
-        for (Map.Entry<String, String> pair : map.entrySet())
-        {
+        for (Map.Entry<String, String> pair : map.entrySet()) {
             String n1 = pair.getValue();
             String key = pair.getKey();
-            for (Map.Entry<String, String> pair2 : map.entrySet())
-            {
+            for (Map.Entry<String, String> pair2 : map.entrySet()) {
                 String n2 = pair2.getValue();
                 String key2 = pair2.getKey();
                 if (n2.equals(n1))
-                    if(!key2.equals(key))
-                    {
+                    if(!key2.equals(key)) {
                     names.add(n2);
                     }
             }
         }
-        for (int i = 0; i < names.size(); i++)
-        {
+        for (int i = 0; i < names.size(); i++) {
             String value = names.get(i);
             removeItemFromMapByValue(map, value);
         }
-
-
     }
 
-    public static void removeItemFromMapByValue(HashMap<String, String> map, String value)
-    {
+    public static void removeItemFromMapByValue(HashMap<String, String> map, String value) {
         HashMap<String, String> copy = new HashMap<String, String>(map);
-        for (Map.Entry<String, String> pair: copy.entrySet())
-        {
+        for (Map.Entry<String, String> pair: copy.entrySet()) {
             if (pair.getValue().equals(value))
                 map.remove(pair.getKey());
         }

@@ -16,27 +16,18 @@ import java.io.InputStreamReader;
   Мама     Мыла Раму.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
         String n = "";
-
         //напишите тут ваш код
         char[] chars = s.toCharArray();
         if (chars[0] != ' ') chars[0] = Character.toUpperCase(chars[0]);
-        for (int i = 0; i < chars.length; i++)
-        {
+        for (int i = 0; i < chars.length; i++) {
             if (chars[i] == ' ') chars[i+1] = Character.toUpperCase(chars[i + 1]);
             n = n + chars[i];
-
         }
-
         System.out.println(n);
-
     }
-
-
 }

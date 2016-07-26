@@ -10,10 +10,8 @@ import java.util.Map;
 Sim - 5
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         HashMap<String, Object> map = new HashMap<String, Object>();
         map.put("Sim", 5);
         map.put("Tom", 5.5);
@@ -27,12 +25,10 @@ public class Solution
         map.put("Comp", (double)123);
 
         //напишите тут ваш код
-        for (Map.Entry<String, Object> pair : map.entrySet())
-        {
+        for (Map.Entry<String, Object> pair : map.entrySet()) {
             String s1 = pair.getKey();
             Object s2 = pair.getValue();
             System.out.println(s1 + " - " + s2);
         }
-
     }
 }
