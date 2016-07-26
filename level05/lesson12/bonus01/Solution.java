@@ -6,10 +6,8 @@ import java.io.*;
 Задача: Программа вводит два числа с клавиатуры и выводит их сумму на экран.
 */
 
-public class Solution
-{
-   public static void main(String[] args) throws Exception
-    {
+public class Solution {
+   public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s1 = reader.readLine();
         String s2 = reader.readLine();

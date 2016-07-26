@@ -12,20 +12,18 @@ import java.io.*;
 public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int qe = Integer.parseInt(reader.readLine());
-        if (qe > 0)
-        {
+        int quantityOfNumbers = Integer.parseInt(reader.readLine());
+        if (quantityOfNumbers > 0) {
             int first = Integer.parseInt(reader.readLine());
-            for (int i = 1; i <= qe - 1; i++)
-            {
-                int w = Integer.parseInt(reader.readLine()); // ))))))
-                if (w > first)
-                {
-                    first = w;
+            for (int i = 1; i <= quantityOfNumbers - 1; i++) {
+                int number = Integer.parseInt(reader.readLine());
+                if (number > first) {
+                    first = number;
                 }
             }
             int maximum = first;
             System.out.print(maximum);
         }
+        reader.close();
     }
 }

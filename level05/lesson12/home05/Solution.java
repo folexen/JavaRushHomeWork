@@ -6,24 +6,18 @@ package com.javarush.test.level05.lesson12.home05;
 
 import java.io.*;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int sum = 0;
-        while (true)
-        {
+        while (true) {
             String s = reader.readLine();
-            if (s.equals("сумма"))
-            {
+            if (s.equalsIgnoreCase("сумма")) {
                 System.out.println(sum);
                 break;
             }
             else
             sum = sum + Integer.parseInt(s);
-
-
         }
     }
 }

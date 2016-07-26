@@ -6,55 +6,46 @@ package com.javarush.test.level05.lesson12.home03;
 Mouse jerryMouse = new Mouse(“Jerry”, 12 , 5), где 12 - высота в см, 5 - длина хвоста в см.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Mouse jerryMouse = new Mouse("Jerry", 12 , 5);
-
         Cat tomCat = new Cat("Tom", 6, 5);
-
         Dog butchDog = new Dog ("Butch", 9, 25);
-
     }
 
-    public static class Mouse
-    {
+    public static class Mouse {
         String name;
         int height;
         int tail;
 
-        public Mouse(String name, int height, int tail)
-        {
+        public Mouse(String name, int height, int tail) {
             this.name = name;
             this.height = height;
             this.tail = tail;
         }
     }
 
-    public static class Cat
-    {
+    public static class Cat {
         String name;
         int height;
         int weight;
 
-        public Cat(String name, int height, int weight){
+        public Cat(String name, int height, int weight) {
             this.name = name;
             this.height = height;
             this.weight = weight;
         }
     }
-    public static class Dog
-    {
+
+    public static class Dog {
         String name;
         int speed;
         int weight;
 
-        public Dog(String name, int speed, int weight){
+        public Dog(String name, int speed, int weight) {
             this.name = name;
             this.speed = speed;
             this.weight = weight;
         }
     }
-
 }

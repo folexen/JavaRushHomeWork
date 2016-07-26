@@ -8,34 +8,18 @@ package com.javarush.test.level05.lesson12.home02;
 5. Объекты выведи на экран в таком формате [name + " " + age + " " + address].
 */
 
-public class Solution
-{
+public class Solution {
     private String name;
     private int age;
     private String address;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         //создай по два объекта каждого класса тут
-        Man man1 = new Man();
-        man1.name = "Steve";
-        man1.age = 21;
-        man1.address = "Monaco";
+        Man man1 = new Man("Steve", 21, "Monaco");
+        Man man2 = new Man("Jobs", 34, "Yele");
 
-        Man man2 = new Man();
-        man2.name = "Jobs";
-        man2.age = 34;
-        man2.address = "Yele";
-
-        Woman woman1 = new Woman();
-        woman1.name = "Lisa";
-        woman1.age = 20;
-        woman1.address = "Michigan";
-
-        Woman woman2 = new Woman();
-        woman2.name = "Gratham";
-        woman2.age = 29;
-        woman2.address = "Nica";
+        Woman woman1 = new Woman("Lisa", 20, "Michigan");
+        Woman woman2 = new Woman("Gratham", 29 ,"Nica");
 
         //выведи их на экран тут
         System.out.println(man1.name + " " + man1.age + " " + man1.address);
@@ -47,32 +31,27 @@ public class Solution
     }
 
     //добавьте тут ваши классы
-    public static class Man
-    {
+    public static class Man {
         public String name;
         public int age;
         public String address;
+
+        public Man(String name, int age, String address) {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+        }
     }
 
-    public static class Woman
-    {
+    public static class Woman {
         public String name;
         public int age;
         public String address;
-    }
 
-    public void Man(String name, int age, String address)
-    {
-        this.name = name;
-        this.age = age;
-        this.address = address;
+        public Woman(String name, int age, String address) {
+            this.name = name;
+            this.age = age;
+            this.address = address;
+        }
     }
-
-    public void Woman(String name, int age, String address)
-    {
-        this.name = name;
-        this.age = age;
-        this.address = address;
-    }
-
 }
