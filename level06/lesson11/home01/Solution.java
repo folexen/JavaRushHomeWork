@@ -6,10 +6,8 @@ package com.javarush.test.level06.lesson11.home01;
 catCount увеличивается на 1. Создать 10 объектов Cat и вывести значение переменной catCount на экран.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         //Cоздай тут 10 объектов Cat
         Cat cat1 = new Cat();
         Cat cat2 = new Cat();
@@ -22,18 +20,13 @@ public class Solution
         Cat cat9 = new Cat();
         Cat cat10 = new Cat();
 
-
         System.out.println(Cat.catCount);
     }
 
-    public static class Cat
-    {
+    public static class Cat {
         public static int catCount = 0;
-
-        public Cat()
-        {
+        public Cat() {
             catCount++;
         }
     }
-
 }

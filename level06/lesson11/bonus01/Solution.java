@@ -6,11 +6,9 @@ package com.javarush.test.level06.lesson11.bonus01;
 
 import java.io.*;
 
-public class Solution
-{
+public class Solution {
     public static int max = 100;
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader  = new BufferedReader(new InputStreamReader(System.in));
 
         String s1 = "Max is ";
@@ -20,5 +18,4 @@ public class Solution
 
         System.out.println(s1 + max);
     }
-
 }
