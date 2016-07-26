@@ -11,64 +11,51 @@ Cat name is Barsik, age is 6, weight is 5, tail = 22
 Cat name is Murka, age is 8, weight is 7, tail = 20
 */
 
-public class Solution
-{
+public class Solution {
     public final static ArrayList<Cat> CATS = new ArrayList<Cat>();
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        while (true)
-        {
+        while (true) {
             String name = reader.readLine();
             if (name.isEmpty()) break;
-            String age_1 = reader.readLine();
-            if (age_1.isEmpty()) break;
-            String weight_1 = reader.readLine();
-            if (weight_1.isEmpty()) break;
-            String tailLength_1 = reader.readLine();
-            if (tailLength_1.isEmpty()) break;
-            int age = Integer.parseInt(age_1);
-            int weight = Integer.parseInt(weight_1);
-            int tailLength = Integer.parseInt(tailLength_1);
-
-
+            String age1 = reader.readLine();
+            if (age1.isEmpty()) break;
+            String weight1 = reader.readLine();
+            if (weight1.isEmpty()) break;
+            String tailLength1 = reader.readLine();
+            if (tailLength1.isEmpty()) break;
+            int age = Integer.parseInt(age1);
+            int weight = Integer.parseInt(weight1);
+            int tailLength = Integer.parseInt(tailLength1);
 
             Cat cat = new Cat(name, age, weight, tailLength);
             CATS.add(cat);
         }
-
         printList();
     }
 
     public static void printList() {
-        for (int i = 0; i < CATS.size(); i++)
-        {
+        for (int i = 0; i < CATS.size(); i++) {
             System.out.println(CATS.get(i));
         }
     }
 
-    public static class Cat
-    {
+    public static class Cat {
         private String name;
         private int age;
         private int weight;
         private int tailLength;
 
-        Cat(String name, int age, int weight, int tailLength)
-        {
+        Cat(String name, int age, int weight, int tailLength) {
             this.name = name;
             this.age = age;
             this.weight = weight;
             this.tailLength = tailLength;
         }
 
-
-
         @Override
-        public String toString()
-        {
+        public String toString() {
             return "Cat name is " + name + ", age is " + age + ", weight is " + weight + ", tail = " + tailLength;
         }
     }

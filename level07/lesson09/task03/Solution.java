@@ -11,28 +11,23 @@ import java.util.Collections;
 3. Используя цикл for вывести результат на экран, каждый элемент списка с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         ArrayList<String> list = new ArrayList<String>();
         ArrayList<String> tmp = new ArrayList<String>();
         list.add("мама");
         list.add("мыла");
         list.add("раму");
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             String x = list.get(i);
             tmp.add(x);
             tmp.add("именно");
         }
         list.removeAll(list);
-        for (int i = 0; i < tmp.size(); i++)
-        {
+        for (int i = 0; i < tmp.size(); i++) {
             list.add(tmp.get(i));
         }
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
 

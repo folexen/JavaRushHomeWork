@@ -12,44 +12,29 @@ import java.util.ArrayList;
 Вывести список на экран, каждое значение с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(reader.readLine());
         int M = Integer.parseInt(reader.readLine());
 
-
         ArrayList<String> list = new ArrayList<String>();
-
-        for (int i = 0; i < N; i++)
-        {
+        for (int i = 0; i < N; i++) {
             list.add(reader.readLine());
         }
 
         ArrayList<String> tmp = new ArrayList<String>();
-        for (int i = 0; i < M; i++)
-        {
+        for (int i = 0; i < M; i++) {
             tmp.add(list.get(i));
         }
-
-        for (int i = 0; i < M; i++)
-        {
+        for (int i = 0; i < M; i++) {
             list.remove(0);
         }
-
-        for (int i = 0; i < M; i++)
-        {
+        for (int i = 0; i < M; i++) {
             list.add(tmp.get(i));
         }
-
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
-
-
-        //напишите тут ваш код
     }
 }

@@ -9,22 +9,17 @@ import java.util.Collections;
 Введи с клавиатуры 5 слов в список строк. Выведи их в обратном порядке.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < 5; i++)
-        {
+        for (int i = 0; i < 5; i++) {
             String s = r.readLine();
             list.add(s);
         }
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             int x = list.size() - i - 1;
             System.out.println(list.get(x));
         }
-
     }
 }

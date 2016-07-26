@@ -9,18 +9,16 @@ package com.javarush.test.level07.lesson06.task04;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < 5; i++){
             String s = reader.readLine();
             list.add(0, s);
         }
-        for (int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
+        for (String str: list){
+            System.out.println(str);
         }
 
     }

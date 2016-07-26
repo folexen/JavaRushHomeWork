@@ -12,22 +12,16 @@ import java.util.List;
 Использовать только цикл for.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<Integer> num = new ArrayList<Integer>();
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++) {
             num.add(Integer.parseInt(reader.readLine()));
         }
-        for (int i = 0; i < num.size(); i++)
-        {
+        for (int i = 0; i < num.size(); i++) {
             int x = num.size() - i - 1;
             System.out.println(num.get(x));
         }
-
-
     }
 }

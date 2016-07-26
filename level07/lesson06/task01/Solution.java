@@ -9,23 +9,17 @@ package com.javarush.test.level07.lesson06.task01;
 
 import java.util.ArrayList;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //напишите тут ваш код
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < 5; i++)
-        {
-            String s = "Whatever";
+        for (int i = 0; i < 5; i++) {
+            String s = "Whatever " + i;
             list.add(s);
         }
         System.out.println(list.size());
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
-
-
     }
 }

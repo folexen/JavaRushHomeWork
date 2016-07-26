@@ -9,32 +9,23 @@ package com.javarush.test.level07.lesson06.task05;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 ArrayList<String> list = new ArrayList<String>();
-                for (int i = 0; i < 5; i++)
-                {
+                for (int i = 0; i < 5; i++) {
                     String s = reader.readLine();
                     list.add(s);
                 }
-
-                for (int i = 0; i < 13; i++)
-                {
-                    int a = list.size() - 1;
-                    String tmp = list.get(a);
-                    list.remove(a);
+                for (int i = 0; i < 13; i++) {
+                    String tmp = list.get(list.size() - 1);
+                    list.remove(list.size() - 1);
                     list.add(0, tmp);
                 }
-
-                for (int i = 0; i < list.size(); i++)
-                {
+                for (int i = 0; i < list.size(); i++) {
                     System.out.println(list.get(i));
                 }
-
             }
         }
 

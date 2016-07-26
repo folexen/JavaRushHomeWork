@@ -8,35 +8,20 @@ package com.javarush.test.level07.lesson06.task02;
 5. Выведи его размер. (После удаления одного элемента индексы остальных меняются.
 Например, если удалить 0-й элемент, то тот, который был 1-м, станет 0-м. И т.д.)
 */
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+public class Solution {
+    public static void main(String[] args) throws Exception {
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < 5; i++)
-        {
-            int a = i + 1;
-            String s = "10" + a;
-            list.add(s);
-
+        for (int i = 0; i < 5; i++) {
+            list.add("10" + (i + 1));
         }
         list.remove(2);
         list.remove(0);
-        int a = list.size() - 1;
-        list.remove(a);
-        for (int i = 0; i < list.size(); i++)
-        {
+        list.remove(list.size() - 1);
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
-        int tmp = list.size();
-        System.out.println(tmp);
-
-
+        System.out.println(list.size());
     }
 }

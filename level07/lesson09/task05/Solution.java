@@ -10,39 +10,30 @@ import java.util.ArrayList;
 3. Используя цикл for выведи результат на экран, каждое значение с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //Считать строки с консоли и объявить ArrayList list тут
         ArrayList<String> list = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++) {
             String x = reader.readLine();
             list.add(x);
         }
-
         ArrayList<String> result = doubleValues(list);
-
         //Вывести на экран result
-        for (int i = 0; i < result.size(); i++)
-        {
+        for (int i = 0; i < result.size(); i++) {
             System.out.println(result.get(i));
         }
     }
 
-    public static ArrayList<String> doubleValues(ArrayList<String> list)
-    {
+    public static ArrayList<String> doubleValues(ArrayList<String> list) {
         //напишите тут ваш код
         ArrayList<String> tmp = new ArrayList<String>();
-
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
          String x = list.get(i);
             tmp.add(x);
             tmp.add(x);
-       }
+        }
         return tmp;
     }
 }

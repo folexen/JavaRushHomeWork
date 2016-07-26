@@ -21,16 +21,11 @@ import java.util.ArrayList;
 лоза
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
-
-
         ArrayList<String> list = new ArrayList<String>();
-        while(true)
-        {
+        while(true) {
             String s = bis.readLine();
             if (s.isEmpty())
                 break;
@@ -40,39 +35,28 @@ public class Solution
         list.add("лира"); //1
         list.add("лоза"); //2*/
         list = fix(list);
-
-        for (String s : list)
-        {
+        for (String s : list) {
             System.out.println(s);
         }
     }
 
-    public static ArrayList<String> fix(ArrayList<String> list)
-    {
+    public static ArrayList<String> fix(ArrayList<String> list) {
         //напишите тут ваш код
         ArrayList<String> newlist = new ArrayList<String>();
-        for (int i = 0; i < list.size(); i++)
-        {
-            if (!list.get(i).contains("р"))
-            {
-                if (list.get(i).contains("л"))
-                {
+        for (int i = 0; i < list.size(); i++) {
+            if (!list.get(i).contains("р")) {
+                if (list.get(i).contains("л")) {
                     newlist.add(list.get(i));
                     newlist.add(list.get(i));
-                } else
-                {
+                }
+                else {
                     newlist.add(list.get(i));
                 }
             }
-             if (list.get(i).contains("л") && list.get(i).contains("р"))
-            {
+            if (list.get(i).contains("л") && list.get(i).contains("р")) {
                 newlist.add(list.get(i));
             }
-
-
-
         }
-
         return newlist;
     }
 }

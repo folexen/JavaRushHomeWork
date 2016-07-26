@@ -12,16 +12,12 @@ Thread.sleep(100); //задержка на одну десятую секунд�
 Бум!
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws InterruptedException
-    {
-        for (int i=30;i>=0;i--)
-        {
+public class Solution {
+    public static void main(String[] args) throws InterruptedException {
+        for (int i=30;i>=0;i--) {
             System.out.println(i);
             Thread.sleep(100);
         }
-
         System.out.println("Бум!");
     }
 }

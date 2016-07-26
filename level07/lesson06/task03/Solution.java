@@ -10,34 +10,21 @@ package com.javarush.test.level07.lesson06.task03;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> list = new ArrayList<String>();
-        ArrayList<String> list_tmp = new ArrayList<String>();
 
-        for (int i = 0; i < 5; i++)
-        {
+        for (int i = 0; i < 5; i++) {
             String s = reader.readLine();
             list.add(s);
         }
-// правильный механизм сортировки.
-        for (int i = 0; i < list.size(); i++)
-        {
-            String tmp = list.get(i);
-            list_tmp.add(0, tmp);
 
+       Collections.reverse(list);
+        for (String str: list) {
+            System.out.println(str);
         }
-        list = list_tmp;
-
-        for (int i = 0; i < list.size(); i++)
-        {
-            System.out.println(list.get(i));
-        }
-
-
     }
 }

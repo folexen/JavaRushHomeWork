@@ -18,38 +18,26 @@ import java.util.ArrayList;
 Я Я Я
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         ArrayList<String> list = new ArrayList<String>();
-        while (true)
-        {
+        while (true) {
             String s = reader.readLine();
             if (s.isEmpty()) break;
             list.add(s);
         }
-
         ArrayList<String> multi_list = new ArrayList<String>();
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             String s = list.get(i);
-            if (s.length() % 2 == 0)
-            {
+            if (s.length() % 2 == 0) {
                 multi_list.add(s + " " + s);
             }
-            else
-            {
+            else {
                 multi_list.add(s + " " + s + " " + s);
-
             }
-
         }
-
-        for (int i = 0; i < multi_list.size(); i++)
-        {
+        for (int i = 0; i < multi_list.size(); i++) {
             System.out.println(multi_list.get(i));
         }
     }
