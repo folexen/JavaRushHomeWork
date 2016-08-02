@@ -24,14 +24,11 @@ import java.util.Map;
 1 Мыла
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        while (true)
-        {
+        while (true) {
             String id = reader.readLine();
             if (id.isEmpty()) break;
             String name = reader.readLine();
@@ -40,8 +37,7 @@ public class Solution
             map.put(name, a);
         }
 
-        for (Map.Entry<String, Integer> pair : map.entrySet())
-        {
+        for (Map.Entry<String, Integer> pair : map.entrySet()) {
             String name = pair.getKey();
             int a = pair.getValue();
             System.out.println(a + " " + name);

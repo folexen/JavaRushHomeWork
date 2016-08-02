@@ -5,30 +5,19 @@ package com.javarush.test.level11.lesson11.home05;
 Унаследовать студента от школьника, сотрудника от студента, раба от сотрудника.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
     }
 
-    public class Schoolboy
-    {
-
+    public class Schoolboy {
     }
 
-    public class Student extends Schoolboy
-    {
-
+    public class Student extends Schoolboy {
     }
 
-    public class Worker extends Student
-    {
-
+    public class Worker extends Student {
     }
 
-    public class Slave extends Worker
-    {
-
+    public class Slave extends Worker {
     }
-
 }

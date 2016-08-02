@@ -4,10 +4,8 @@ package com.javarush.test.level10.lesson11.home02;
 Добавить одну операцию по преобразованию типа, чтобы получался ответ: d=5.5.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         int a = 5;
         int b = 4;
         int c = 3;

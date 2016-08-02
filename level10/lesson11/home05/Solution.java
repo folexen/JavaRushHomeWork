@@ -15,47 +15,33 @@ import java.util.ArrayList;
 я 9
 */
 
-public class Solution
-{
-    public static void main(String[] args)  throws Exception
-    {
+public class Solution {
+    public static void main(String[] args)  throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         //алфавит
         String abc = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
         char[] abcArray = abc.toCharArray();
-
         ArrayList<Character> alphabet = new ArrayList<Character>();
-        for (int i = 0; i < abcArray.length; i++)
-        {
+        for (int i = 0; i < abcArray.length; i++) {
             alphabet.add(abcArray[i]);
         }
-
         //ввод строк
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++) {
             String s = reader.readLine();
             list.add(s.toLowerCase());
         }
-
-
         //напишите тут ваш код
-        for (Character c : alphabet)
-        {
+        for (Character c : alphabet) {
             char ch = c;
             int count = 0;
-            for (String text : list)
-            {
+            for (String text : list) {
                 char[] chars = text.toCharArray();
-                for (int i = 0; i < chars.length; i++)
-                {
+                for (int i = 0; i < chars.length; i++) {
                     if (chars[i] == ch) count++;
                 }
             }
             System.out.println(c + " " + count);
         }
-
     }
-
 }

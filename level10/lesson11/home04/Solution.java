@@ -12,22 +12,16 @@ package com.javarush.test.level10.lesson11.home04;
 …
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         String s = "Я не хочу изучать Java, я хочу большую зарплату";
-
         //напишите тут ваш код
         char[] ch = s.toCharArray();
-        for (int j = 0; j < 40; j++)
-        {
-            for (int i = j; i < ch.length; i++)
-            {
+        for (int j = 0; j < 40; j++) {
+            for (int i = j; i < ch.length; i++) {
                 System.out.print(ch[i]);
             }
             System.out.println("");
         }
     }
-
 }
