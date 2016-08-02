@@ -16,7 +16,6 @@ public class Solution {
 
     public static void main(String[] args) throws Exception {
         //напишите тут ваш код
-
         SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, YYYY", Locale.ENGLISH);
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         Date date = new Date(r.readLine());

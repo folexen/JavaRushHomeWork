@@ -6,20 +6,18 @@ package com.javarush.test.level09.lesson11.home01;
 */
 
 public class Solution {
-
     public static void main(String[] args) {
-
         try {
             divisionByZero();
         }
-        catch (ArithmeticException e)
-        {
+        catch (ArithmeticException e) {
             e.printStackTrace();
         }
-        }
-        public static void divisionByZero(){
+    }
+
+    public static void divisionByZero(){
         int value = 12 / 0;
-            System.out.println(value);
+        System.out.println(value);
     }
 }
 

@@ -15,38 +15,29 @@ import java.util.Set;
 Числа выводить с новой строки сохраняя порядок ввода.
 */
 
-public class Solution
-{
+public class Solution {
     public static void main(String[] args) {
-
         readData();
     }
 
-    public static void readData()
-    {
+    public static void readData() {
         //напишите тут ваш код
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         Set<Integer> num = new HashSet<Integer>();
-
-
-                try
-                {
-                    while(true)
-                    {
-                        String s = r.readLine();
-                        if (s.isEmpty()) break;
-                        int a = Integer.parseInt(s);
-                        num.add(a);
-                    }
-                }
-                catch (Exception e)
-                {
-                    for (Integer i : num)
-                    {
-                        System.out.println(i);
-                    }
-                }
+        try {
+            while(true) {
+                String s = r.readLine();
+                if (s.isEmpty()) break;
+                int a = Integer.parseInt(s);
+                num.add(a);
             }
         }
+        catch (Exception e) {
+            for (Integer i : num) {
+                System.out.println(i);
+            }
+        }
+    }
+}
 
 

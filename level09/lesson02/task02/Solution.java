@@ -4,53 +4,40 @@ package com.javarush.test.level09.lesson02.task02;
 Написать пять методов, которые вызывают друг друга. Каждый метод должен возвращать имя метода, вызвавшего его, полученное с помощью StackTrace.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         method1();
     }
 
-    public static String method1()
-    {
+    public static String method1() {
         method2();
         //напишите тут ваш код
        String s1 = Thread.currentThread().getStackTrace()[2].getMethodName();
         return s1;
-
-
     }
 
-    public static String method2()
-    {
+    public static String method2() {
         method3();
         //напишите тут ваш код
         String s1 = Thread.currentThread().getStackTrace()[2].getMethodName();
         return s1;
-
     }
 
-    public static String method3()
-    {
+    public static String method3() {
         method4();
         //напишите тут ваш код
         String s1 = Thread.currentThread().getStackTrace()[2].getMethodName();
         return s1;
-
     }
 
-    public static String method4()
-    {
+    public static String method4() {
         method5();
         String s1 = Thread.currentThread().getStackTrace()[2].getMethodName();
         return s1;
-
     }
 
-    public static String method5()
-    {
+    public static String method5() {
         String s1 = Thread.currentThread().getStackTrace()[2].getMethodName();
         return s1;
-
     }
 }

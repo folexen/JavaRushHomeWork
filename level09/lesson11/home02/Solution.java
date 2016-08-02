@@ -5,21 +5,15 @@ package com.javarush.test.level09.lesson11.home02;
 Обернуть вызов sleep в try..catch.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
-        for (int i = 10; i >= 0; i--)
-        {
+public class Solution {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 0; i--) {
             System.out.println(i);
-
             //напишите тут ваш код
-            try
-            {
+            try {
                 Thread.sleep(100);
             }
-            catch (InterruptedException e)
-            {
+            catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }

@@ -23,13 +23,10 @@ public class Solution {
         wolf.ate.add(grandmother);
         wolf.ate.add(hood);
         woodman.killed.add(wolf);
-
     }
-
     //красная шапочка
     public static class LittleRedRidingHood extends StoryItem {
     }
-
     //бабушка
     public static class Grandmother extends StoryItem {
     }
@@ -37,11 +34,9 @@ public class Solution {
     //пирожок
     public static class Patty extends StoryItem {
     }
-
     //дровосек
     public static class Woodman extends StoryItem {
     }
-
     //волк
     public static class Wolf extends StoryItem {
     }
