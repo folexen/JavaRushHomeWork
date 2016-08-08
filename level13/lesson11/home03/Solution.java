@@ -11,19 +11,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //add your code here
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         String s = r.readLine();
         FileInputStream FIS = new FileInputStream(s);
-        while (FIS.available() > 0)
-        {
+        while (FIS.available() > 0) {
             System.out.print((char) FIS.read());
         }
         FIS.close();
-
     }
 }

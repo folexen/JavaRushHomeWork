@@ -4,24 +4,18 @@ package com.javarush.test.level13.lesson11.home01;
 Удали все некорректные строки в интерфейсе Button.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         System.out.println(SimpleObject.NAME);
         System.out.println(Button.NAME);
     }
 
-    interface SimpleObject
-    {
+    interface SimpleObject {
         String NAME = "SimpleObject";
         void onPress();
     }
 
-    interface Button extends SimpleObject
-    {
-
+    interface Button extends SimpleObject {
         final String NAME = "Submit";
-
     }
 }

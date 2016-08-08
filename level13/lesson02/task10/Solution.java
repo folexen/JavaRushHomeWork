@@ -6,56 +6,43 @@ package com.javarush.test.level13.lesson02.task10;
 чтобы все методы у классов CleverMan и SmartGirl оказались объявленными в каком-то интерфейсе.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
     }
 
-    interface Person
-    {
+    interface Person {
         void use(Person person);
         void startToWork();
     }
 
-    interface Workable
-    {
+    interface Workable {
         boolean wantGetExtraWork();
     }
 
-    interface Secretary extends Person
-    {
+    interface Secretary extends Person {
     }
 
-    interface Boss extends Person, Workable
-    {
+    interface Boss extends Person, Workable {
     }
 
-    class CleverMan implements Boss
-    {
-        public void use(Person person)
-        {
+    class CleverMan implements Boss {
+        public void use(Person person) {
             person.startToWork();
         }
 
-        public void startToWork()
-        {
+        public void startToWork() {
         }
 
-        public boolean wantGetExtraWork()
-        {
+        public boolean wantGetExtraWork() {
             return true;
         }
     }
 
-    class SmartGirl implements Secretary
-    {
-        public void use(Person person)
-        {
+    class SmartGirl implements Secretary {
+        public void use(Person person) {
         }
 
-        public void startToWork()
-        {
+        public void startToWork() {
         }
     }
 }

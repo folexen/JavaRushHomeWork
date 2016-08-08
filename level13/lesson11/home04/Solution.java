@@ -9,24 +9,19 @@ package com.javarush.test.level13.lesson11.home04;
 import java.io.*;
 import java.util.ArrayList;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         String s = r.readLine();
         FileOutputStream fos = new FileOutputStream(s);
         ArrayList<String> list = new ArrayList<String>();
-        while (true)
-            {
-             String tmp = r.readLine();
+        while (true) {
+            String tmp = r.readLine();
                 list.add(tmp);
                 if (tmp.equals("exit")) break;
             }
-
         String lineSeparator = System.getProperty("line.separator");
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             fos.write(list.get(i).getBytes());
             fos.write(lineSeparator.getBytes());
         }
