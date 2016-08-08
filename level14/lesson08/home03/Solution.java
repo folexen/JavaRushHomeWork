@@ -20,27 +20,22 @@ import java.util.ArrayList;
 3.4. Вызывает метод enjoy(), если person имеет тип Proger.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Person person = null;
         String key = null;
         ArrayList<String> list = new ArrayList<String>();
         //тут цикл по чтению ключей, пункт 1
-        while(true)
-        {
+        while(true) {
             key = reader.readLine();
-            if (key.equals("user") || key.equals("coder") || key.equals("looser") || key.equals("proger"))
-            {
+            if (key.equals("user") || key.equals("coder") || key.equals("looser") || key.equals("proger")) {
                 //создаем объект, пункт 2
                 list.add(key);
             }
             else break;
         }
-            for (String s : list)
-            {
+            for (String s : list) {
                 key = s;
                 if (key.equals("user")) person = new Person.User();
                 if (key.equals("coder")) person = new Person.Coder();
@@ -49,8 +44,7 @@ public class Solution
                 doWork(person); //вызываем doWork
             }
     }
-    public static void doWork(Person person)
-    {
+    public static void doWork(Person person) {
         // пункт 3
         if (person instanceof Person.User) ((Person.User) person).live();
         if (person instanceof Person.Coder) ((Person.Coder) person).coding();

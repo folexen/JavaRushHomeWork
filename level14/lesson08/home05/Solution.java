@@ -16,24 +16,18 @@ package com.javarush.test.level14.lesson08.home05;
 13. Класс Solution менять нельзя.
 */
 
-public class Solution
-{
-
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Computer computer = new Computer();
         if (isWork(computer.getKeyboard()) &&
                 isWork(computer.getMonitor()) &&
-                isWork(computer.getMouse()))
-        {
+                isWork(computer.getMouse())) {
             System.out.println("Work!");
         }
     }
 
-    public static boolean isWork(CompItem item)
-    {
+    public static boolean isWork(CompItem item) {
         System.out.println(item.getName());
         return item.getName() != null && item.getName().length() > 4;
     }
-
 }

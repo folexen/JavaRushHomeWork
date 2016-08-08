@@ -7,60 +7,45 @@ package com.javarush.test.level14.lesson08.home04;
 2. Метод main менять нельзя.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Object obj = new Circle();
         Movable movable = (Movable) obj;
         Drawable drawable = new Rectangle();
-
         printMainInfo(drawable);
         printMainInfo(movable);
     }
 
-    public static void printMainInfo(Object object)
-    {
+    public static void printMainInfo(Object object) {
         //Add your code here
         if (object instanceof Movable) ((Movable) object).move();
         if (object instanceof Drawable) ((Drawable) object).draw();
     }
 
-    static interface Movable
-    {
-
+    static interface Movable {
         void move();
     }
 
-    static class Circle implements Movable
-    {
-
-        public void draw()
-        {
+    static class Circle implements Movable {
+        public void draw() {
             System.out.println("can be drawn");
         }
 
-        public void move()
-        {
+        public void move() {
             System.out.println("can be moved");
         }
-
     }
 
-    static interface Drawable
-    {
+    static interface Drawable {
         void draw();
     }
 
-    static class Rectangle implements Drawable
-    {
-        public void draw()
-        {
+    static class Rectangle implements Drawable {
+        public void draw() {
             System.out.println("can be drawn");
         }
 
-        public void move()
-        {
+        public void move() {
             System.out.println("can be moved");
         }
     }

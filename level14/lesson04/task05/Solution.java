@@ -10,54 +10,43 @@ import java.io.InputStreamReader;
 - dance, если person имеет тип Dancer
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         Person person = null;
         String key;
-        while ((key = reader.readLine()) != null)
-        {
-            if ("player".equals(key))
-            {
+        while ((key = reader.readLine()) != null) {
+            if ("player".equals(key)) {
                 person = new Player();
-            } else if ("dancer".equals(key))
-            {
+            }
+            else if ("dancer".equals(key)) {
                 person = new Dancer();
             }
             haveRest(person);
         }
     }
 
-    public static void haveRest(Person person)
-    {
+    public static void haveRest(Person person) {
         //Add your code here
-        if (person instanceof Player)
-        {
+        if (person instanceof Player) {
             ((Player) person).play();
         }
-        if (person instanceof Dancer)
-        {
+        if (person instanceof Dancer) {
             ((Dancer) person).dance();
         }
     }
 
-    interface Person
-    {
+    interface Person {
     }
 
-    static class Player implements Person
-    {
+    static class Player implements Person {
         void play()
         {
             System.out.println("playing");
         }
     }
 
-    static class Dancer implements Person
-    {
+    static class Dancer implements Person {
         void dance()
         {
             System.out.println("dancing");

@@ -9,44 +9,32 @@ package com.javarush.test.level14.lesson08.bonus02;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         int a = Integer.parseInt(r.readLine());
         int b = Integer.parseInt(r.readLine());
-        if (a > b)
-        {
+        if (a > b) {
             long x = a, y = b, t = 1;
-            while (t != 0)
-            {
+            while (t != 0) {
                 t = x%y;
                 if (t == 0) System.out.println(y);
-                else
-                {
+                else {
                     x = y;
                     y = t;
                 }
-
             }
-
         }
-        else
-        {
+        else {
             long x = b, y = a, t = 1;
-            while (t != 0)
-            {
+            while (t != 0) {
                 t = x%y;
                 if (t == 0) System.out.println(y);
-                else
-                {
+                else {
                     x = y;
                     y = t;
                 }
-
             }
-
         }
     }
 }

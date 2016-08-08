@@ -9,44 +9,37 @@ package com.javarush.test.level14.lesson04.task03;
 6. Явное приведение типов не использовать.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Food food = new Food();
         Selectable selectable = new Food();
         Food newFood = (Food) selectable;
-
         foodMethods(food);
         selectableMethods(selectable);
     }
 
-    public static void foodMethods(Food food)
-    {
+    public static void foodMethods(Food food) {
         //тут добавьте вызов методов для переменной food
         food.eat();
         food.onSelect();
     }
 
-    public static void selectableMethods(Selectable selectable)
-    {
+    public static void selectableMethods(Selectable selectable) {
         //тут добавьте вызов методов для переменной selectable
         selectable.onSelect();
     }
 
 
 
-    interface Selectable
-    {
+    interface Selectable {
         void onSelect();
     }
 
-    static class Food implements Selectable
-    {
-        public void eat()
-        {
+    static class Food implements Selectable {
+        public void eat() {
             System.out.println("food is eaten");
         }
+
         public void onSelect(){
             System.out.println("food is selected");
         }

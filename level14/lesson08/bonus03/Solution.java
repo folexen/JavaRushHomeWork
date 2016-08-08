@@ -12,13 +12,10 @@ package com.javarush.test.level14.lesson08.bonus03;
 
 6. В итоге должна быть возможность создать объект (экземпляр класса) ТОЛЬКО используя метод getInstance.
 */
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Singleton singleton = Singleton.getInstance();
         Singleton singleton2 = Singleton.getInstance();
-        
         System.out.println(singleton);
         System.out.println(singleton2);
     }

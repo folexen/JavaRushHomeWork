@@ -14,54 +14,42 @@ import java.util.List;
 4. Для трехкомнатных квартир (Apt3Room) вызвать метод clean3Rooms
 т.е. если объект типа Apt3Room, то вызвать у него метод clean3Rooms.
 */
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         List<Apartament> apartaments = new ArrayList<Apartament>();
         apartaments.add(new Apt1Room());
         apartaments.add(new Apt2Room());
         apartaments.add(new Apt3Room());
-
         cleanAllApartaments(apartaments);
     }
 
-    public static void cleanAllApartaments(List<Apartament> apartaments)
-    {
+    public static void cleanAllApartaments(List<Apartament> apartaments) {
         //написать тут вашу реализацию пунктов 1-4
-        for (Object o : apartaments)
-        {
+        for (Object o : apartaments) {
             if (o instanceof Apt1Room) ((Apt1Room) o).clean1Room();
             if (o instanceof Apt2Room) ((Apt2Room) o).clean2Rooms();
             if (o instanceof Apt3Room) ((Apt3Room) o).clean3Rooms();
         }
     }
 
-    static interface Apartament
-    {
+    static interface Apartament {
     }
 
-    static class Apt1Room implements Apartament
-    {
-        void clean1Room()
-        {
-            System.out.println("1 room is cleaned");
+    static class Apt1Room implements Apartament {
+        void clean1Room() {
+            System.out.println("1 room cleaned");
         }
     }
 
-    static class Apt2Room implements Apartament
-    {
-        void clean2Rooms()
-        {
-            System.out.println("2 rooms are cleaned");
+    static class Apt2Room implements Apartament {
+        void clean2Rooms() {
+            System.out.println("2 rooms cleaned");
         }
     }
 
-    static class Apt3Room implements Apartament
-    {
-        void clean3Rooms()
-        {
-            System.out.println("3 rooms are cleaned");
+    static class Apt3Room implements Apartament {
+        void clean3Rooms() {
+            System.out.println("3 rooms cleaned");
         }
     }
 }

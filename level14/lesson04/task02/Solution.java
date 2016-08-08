@@ -12,92 +12,74 @@ import java.util.ArrayList;
 4. Вывести на экран cat.toString().
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         //Add your code here
         BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> list = new ArrayList<String>();
-        while (true)
-        {
+        while (true) {
             String s = r.readLine();
             if (s.isEmpty()) break;
             list.add(s);
         }
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
            Cat cat = CatFactory.getCatByKey(list.get(i));
             System.out.println(cat.toString());
         }
     }
 
-    static class CatFactory
-    {
-
-        static Cat getCatByKey(String key)
-        {
+    static class CatFactory {
+        static Cat getCatByKey(String key) {
             Cat cat = null;
-            if ("vaska".equals(key))
-            {
+            if ("vaska".equals(key)) {
                 cat = new MaleCat("Василий");
-            } else if ("murka".equals(key))
-            {
+            }
+            else if ("murka".equals(key)) {
                 cat = new FemaleCat("Мурочка");
-            } else if ("kiska".equals(key))
-            {
+            }
+            else if ("kiska".equals(key)) {
                 cat = new FemaleCat("Кисюлька");
-            } else
-            {
+            }
+            else {
                 cat = new Cat(key);
             }
-
             return cat;
         }
     }
 
-    static class Cat
-    {
+    static class Cat {
         private String name;
 
-        protected Cat(String name)
-        {
+        protected Cat(String name) {
             this.name = name;
         }
 
-        public String getName()
-        {
+        public String getName() {
             return this.name;
         }
 
-        public String toString()
-        {
+        public String toString() {
             return "Я уличный кот " + getName();
         }
     }
 
-    static class MaleCat extends Cat
-    {
-        MaleCat(String name)
-        {
+    static class MaleCat extends Cat {
+        MaleCat(String name) {
             super(name);
         }
 
-        public String toString()
-        {
+        public String toString() {
             return "Я - солидный кошак по имени " + getName();
         }
     }
 
-    static class FemaleCat extends Cat
-    {
+    static class FemaleCat extends Cat {
         FemaleCat(String name)
         {
             super(name);
         }
 
-        public String toString()
-        {
+        public String toString() {
             return "Я - милая кошечка по имени " + getName();
         }
     }

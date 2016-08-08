@@ -9,10 +9,8 @@ package com.javarush.test.level14.lesson08.home08;
 6. Подумать, какое животное еще не умеет плавать и добавить ему интерфейс Swimable.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Swimable animal = new Orca();
         animal.swim();
         animal = new Whale();
@@ -21,84 +19,62 @@ public class Solution
         animal.swim();
     }
 
-    public static void test(Swimable animal)
-    {
+    public static void test(Swimable animal) {
         animal.swim();
     }
 
-    static interface Walkable
-    {
+    static interface Walkable {
         void walk();
     }
 
-    static interface Swimable
-    {
+    static interface Swimable {
         void swim();
     }
 
-    static abstract class OceanAnimal implements Swimable
-    {
-        public void swim()
-        {
+    static abstract class OceanAnimal implements Swimable {
+        public void swim() {
             OceanAnimal currentAnimal = (OceanAnimal) getCurrentAnimal();
             currentAnimal.swimming();
         }
 
-        private void swimming()
-        {
+        private void swimming() {
             System.out.println(getCurrentAnimal().getClass().getSimpleName() + " is swimming");
         }
 
         abstract Swimable getCurrentAnimal();
     }
 
-    static class Orca extends OceanAnimal
-    {
-        public void swim()
-        {
+    static class Orca extends OceanAnimal {
+        public void swim() {
             OceanAnimal currentAnimal = (OceanAnimal) getCurrentAnimal();
             currentAnimal.swimming();
         }
 
-
-        public Swimable getCurrentAnimal()
-        {
+        public Swimable getCurrentAnimal() {
             return new Orca();
         }
     }
 
-    static class Whale extends OceanAnimal
-    {
-        public void swim()
-        {
+    static class Whale extends OceanAnimal {
+        public void swim() {
             OceanAnimal currentAnimal = (OceanAnimal) getCurrentAnimal();
             currentAnimal.swimming();
         }
 
-
-        public Swimable getCurrentAnimal()
-        {
+        public Swimable getCurrentAnimal() {
             return new Whale();
         }
-
     }
 
-    static class Otter implements Walkable, Swimable
-    {
-        public void swim()
-        {
-
-        }
-        public void walk()
-        {
-
+    static class Otter implements Walkable, Swimable {
+        public void swim() {
         }
 
+        public void walk() {
+        }
 
-        public Swimable getCurrentAnimal()
-        {
+        public Swimable getCurrentAnimal() {
             return new Otter();
         }
-
     }
 }
