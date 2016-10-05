@@ -10,6 +10,12 @@
           <option name="namespace" value="folexen" />
           <option name="sshUrl" value="git@gitlab.com:folexen/home_task_1.git" />
         </ProjectDto>
+        <ProjectDto>
+          <option name="httpUrl" value="https://gitlab.com/folexen/temp.git" />
+          <option name="name" value="Temp" />
+          <option name="namespace" value="folexen" />
+          <option name="sshUrl" value="git@gitlab.com:folexen/temp.git" />
+        </ProjectDto>
       </list>
     </option>
   </component>
