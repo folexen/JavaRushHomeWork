@@ -1,0 +1,16 @@
+<application>
+  <component name="SettingsState">
+    <option name="host" value="https://gitlab.com" />
+    <option name="token" value="5EN8XqgNo-g-XrL2a4Rz" />
+    <option name="projects">
+      <list>
+        <ProjectDto>
+          <option name="httpUrl" value="https://gitlab.com/folexen/home_task_1.git" />
+          <option name="name" value="home_task_1" />
+          <option name="namespace" value="folexen" />
+          <option name="sshUrl" value="git@gitlab.com:folexen/home_task_1.git" />
+        </ProjectDto>
+      </list>
+    </option>
+  </component>
+</application>
