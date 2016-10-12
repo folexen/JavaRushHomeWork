@@ -2,7 +2,7 @@
   <tool name="javap" description="javap, the class decompiler" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
     <exec>
       <option name="COMMAND" value="C:\Program Files\Java\jdk1.8.0_101\bin\javap.exe" />
-      <option name="PARAMETERS" value="$FileClass$" />
+      <option name="PARAMETERS" value="-c $FileClass$" />
       <option name="WORKING_DIRECTORY" value="$OutputPath$" />
     </exec>
   </tool>
